@@ -83,6 +83,11 @@ slowlog-max-len {{ redis_slowlog_max_len }}
 # Event Notification
 notify-keyspace-events {{ redis_notify_keyspace_events }}
 
+# Cluster
+cluster-enabled {{ redis_clustermode_enabled }}
+cluster-config-file nodes.conf
+cluster-node-timeout {{ redis_cluster_timeout }}
+
 # Advanced
 hash-max-ziplist-entries 512
 hash-max-ziplist-value 64

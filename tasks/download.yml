@@ -41,3 +41,10 @@
     dest: /usr/local/src
     creates: /usr/local/src/redis-{{ redis_version }}/Makefile
     copy: no
+
+- name: "download redis trib"
+  get_url:
+    url: "http://download.redis.io/redis-stable/src/redis-trib.rb"
+    dest: "/usr/bin/redis-trib"
+  mode: 755
+  when: redis_cluster_mode == "yes"

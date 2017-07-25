@@ -95,6 +95,12 @@ redis_auto_aof_rewrite_percentage: "100"
 redis_auto_aof_rewrite_min_size: "64mb"
 redis_notify_keyspace_events: '""'
 
+## Redis Cluster mode
+redis_clustermode_enabled: "no"
+redis_cluster_timeout: 5000
+
+
+
 ## Redis sentinel configs
 # Set this to true on a host to configure it as a Sentinel
 redis_sentinel: false

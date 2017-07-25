@@ -25,3 +25,6 @@
 
 - include: local_facts.yml
   when: redis_local_facts|bool
+
+- include: "cluster.yml"
+  when: redis_clustermode_enabled == "yes"
