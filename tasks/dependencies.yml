@@ -51,3 +51,4 @@
     - "{{ 'gcc-32bit' if redis_make_32bit|bool else 'gcc' }}"
     - "{{ 'libgcc_s1-32bit' if redis_make_32bit|bool else 'gcc' }}"
   when: ansible_os_family == 'Suse'
+

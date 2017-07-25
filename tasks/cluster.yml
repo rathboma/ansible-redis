@@ -1,3 +1,22 @@
 ---
 
 # - name: "Set up the redis cluster"
+
+
+- name: "Install ruby dependencies"
+  apt:
+    pkg: "{{ ruby }}"
+    update_cache: yes
+  when: ansible_os_family == "Debian"
+
+
+- name: "Install redis gem"
+  gem:
+    name: "redis"
+    state: "latest"
+
+- name: "download redis trib"
+  get_url:
+    url: "http://download.redis.io/redis-stable/src/redis-trib.rb"
+    dest: "/usr/bin/redis-trib"
+    mode: 755
