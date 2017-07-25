@@ -47,4 +47,4 @@
     url: "http://download.redis.io/redis-stable/src/redis-trib.rb"
     dest: "/usr/bin/redis-trib"
     mode: 755
-  when: redis_cluster_mode == "yes"
+  when: redis_clustermode_enabled == "yes"
