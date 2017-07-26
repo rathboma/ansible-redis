@@ -73,6 +73,8 @@ no-appendfsync-on-rewrite {{ redis_no_appendfsync_on_rewrite }}
 auto-aof-rewrite-percentage {{ redis_auto_aof_rewrite_percentage }}
 auto-aof-rewrite-min-size {{ redis_auto_aof_rewrite_min_size }}
 
+aof-use-rdb-preamble {{redis_aof_rdb_preamble}}
+
 # Lua
 lua-time-limit 5000
 

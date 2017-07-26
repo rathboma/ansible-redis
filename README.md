@@ -298,6 +298,9 @@ redis_auto_aof_rewrite_percentage: "100"
 redis_auto_aof_rewrite_min_size: "64mb"
 redis_notify_keyspace_events: '""'
 
+# From Redis 4.0 onwards, enable RDB format for compacting AOF files better
+redis_aof_rdb_preamble: no
+
 ## Redis sentinel configs
 # Set this to true on a host to configure it as a Sentinel
 redis_sentinel: false
