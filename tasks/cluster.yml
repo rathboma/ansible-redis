@@ -14,10 +14,12 @@
 - name: "Install redis gem"
   gem:
     name: "redis"
-    state: "latest"
+    state: "present"
+    version: "3.3.1"
+    user_install: no
 
 - name: "download redis trib"
   get_url:
     url: "http://download.redis.io/redis-stable/src/redis-trib.rb"
     dest: "/usr/bin/redis-trib"
-    mode: 755
+    mode: 0755
